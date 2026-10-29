@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ściągawka — klasy Bootstrapa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    section { scroll-margin-top: 4.5rem; }
+    pre { white-space: pre-wrap; }
+    .demo-mobile.navbar-expand-lg { flex-wrap: wrap; }
+    .demo-mobile.navbar-expand-lg .navbar-toggler { display: block; margin-left: auto; }
+    .demo-mobile.navbar-expand-lg .navbar-collapse:not(.show) { display: none !important; }
+    .demo-mobile.navbar-expand-lg .navbar-collapse.show {
+      display: block !important;
+      flex-basis: 100%;
+      width: 100%;
+    }
+    .demo-mobile.navbar-expand-lg .navbar-nav { flex-direction: column; }
+  </style>
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container-fluid px-3 px-lg-4">
+      <span class="navbar-brand mb-0 h1 fs-6">Ściągawka Bootstrap 5.3.8</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#spis">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="spis">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#siatka">Siatka</a></li>
+          <li class="nav-item"><a class="nav-link" href="#odstepy">Odstępy</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kolory">Kolory</a></li>
+          <li class="nav-item"><a class="nav-link" href="#przyciski">Przyciski</a></li>
+          <li class="nav-item"><a class="nav-link" href="#karta">Karta</a></li>
+          <li class="nav-item"><a class="nav-link" href="#navbar">Navbar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#formularz">Formularz</a></li>
+          <li class="nav-item"><a class="nav-link" href="#switch">Switch</a></li>
+          <li class="nav-item"><a class="nav-link" href="#inf04">INF.04</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid px-3 px-lg-4 py-4">
+    <h1 class="h3">Klasy, co robią i jak wyglądają</h1>
+    <p class="mb-2">4F ZAWB. Otwórz na rzutniku i zwęż okno przy siatce. <span class="badge text-bg-danger">INF.04</span> — klasa z arkusza albo z części pisemnej. <span class="badge text-bg-secondary">lekcja</span> — było na zajęciach, tabela 1 arkusza tego nie wkleja.</p>
+    <p class="text-secondary">Wersja do zeszytu: <code>sciagawka.md</code>.</p>
+
+    <section id="siatka" class="mt-4">
+      <h2 class="h4 border-bottom pb-2">Siatka <span class="badge text-bg-danger">INF.04 pisemna</span></h2>
+      <p>Siatka ma zawsze <strong>12 kolumn</strong>. Klasa bez skrótu działa od 0. Skrót włącza się od podanej szerokości i zostaje na szerszych.</p>
+      <table class="table table-sm bg-white">
+        <thead><tr><th>Skrót</th><th>Od</th><th>Przykład</th></tr></thead>
+        <tbody>
+          <tr><td>brak</td><td>0</td><td><code>col-12</code> — cała szerokość</td></tr>
+          <tr><td><code>sm</code></td><td>576px</td><td><code>col-sm-6</code></td></tr>
+          <tr><td><code>md</code></td><td>768px</td><td><code>col-md-6</code> — połowa</td></tr>
+          <tr><td><code>lg</code></td><td>992px</td><td><code>col-lg-4</code> — 4 z 12</td></tr>
+          <tr><td><code>xl</code></td><td>1200px</td><td><code>col-xl-3</code></td></tr>
+          <tr><td><code>xxl</code></td><td>1400px</td><td><code>col-xxl-2</code></td></tr>
+        </tbody>
+      </table>
+
+      <p class="mb-2"><code>container</code> zostawia puste boki. <code>container-fluid</code> idzie od krawędzi do krawędzi.</p>
+      <div class="mx-n3 mx-lg-n4 mb-4">
+        <div class="bg-primary text-white py-2">
+          <div class="container">container — węższy środek</div>
+        </div>
+        <div class="bg-dark text-white py-2">
+          <div class="container-fluid">container-fluid — cała szerokość</div>
+        </div>
+      </div>
+
+      <p class="mb-2">Dwanaście razy <code>col-1</code>. Tyle kolumn ma jeden <code>row</code>.</p>
+      <div class="row g-1 mb-4">
+        <div class="col-1"><div class="bg-primary text-white text-center">1</div></div>
+        <div class="col-1"><div class="bg-primary text-white text-center">2</div></div>
+        <div class="col-1"><div class="bg-primary text-white text-center">3</div></div>
+        <div class="col-1"><div class="bg-primary text-white text-center">4</div></div>
+        <div class="col-1"><div class="bg-primary text-white text-center">5</div></div>
+        <div class="col-1"><div class="bg-primary text-white text-center">6</div></div>
+        <div class="col-1"><div class="bg-primary text-white text-center">7</div></div>
+        <div class="col-1"><div class="bg-primary text-white text-center">8</div></div>
+        <div class="col-1"><div class="bg-primary text-white text-center">9</div></div>
+        <div class="col-1"><div class="bg-primary text-white text-center">10</div></div>
+        <div class="col-1"><div class="bg-primary text-white text-center">11</div></div>
+        <div class="col-1"><div class="bg-primary text-white text-center">12</div></div>
+      </div>
+
+      <p class="mb-2"><code>col-12 col-md-6 col-lg-4</code> — jedna kolumna na telefonie, dwie od 768px, trzy od 992px. <code>g-3</code> na <code>row</code> to odstęp także po zawinięciu.</p>
+      <div class="row g-3 mb-2">
+        <div class="col-12 col-md-6 col-lg-4"><div class="bg-primary text-white p-3">1 · col-12 col-md-6 col-lg-4</div></div>
+        <div class="col-12 col-md-6 col-lg-4"><div class="bg-success text-white p-3">2 · col-12 col-md-6 col-lg-4</div></div>
+        <div class="col-12 col-md-6 col-lg-4"><div class="bg-warning p-3">3 · col-12 col-md-6 col-lg-4</div></div>
+      </div>
+      <pre class="bg-dark text-white p-3 rounded small mb-0"><code>&lt;div class="row g-3"&gt;
+  &lt;div class="col-12 col-md-6 col-lg-4"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+    <section id="odstepy" class="mt-5">
+      <h2 class="h4 border-bottom pb-2">Odstępy <span class="badge text-bg-secondary">lekcja</span></h2>
+      <p><code>mb-3</code> = margin na dole, poziom 3 = 1rem (16px). <code>py-5</code> = padding góra i dół, poziom 5 = 3rem (48px).</p>
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <div class="border border-danger">
+            <div class="bg-danger-subtle p-3">p-3 — odstęp w środku ramki</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="border border-primary">
+            <div class="bg-primary-subtle mb-3">mb-3 — odstęp pod spodem, na zewnątrz</div>
+            <div class="bg-white">następny blok</div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <table class="table table-sm bg-white mb-0">
+            <thead><tr><th>Litera</th><th>Co</th></tr></thead>
+            <tbody>
+              <tr><td><code>m</code> / <code>p</code></td><td>margin na zewnątrz / padding w środku</td></tr>
+              <tr><td><code>t</code> <code>b</code></td><td>góra / dół</td></tr>
+              <tr><td><code>s</code> <code>e</code></td><td>lewo (start) / prawo (end)</td></tr>
+              <tr><td><code>x</code> <code>y</code></td><td>lewo i prawo / góra i dół</td></tr>
+              <tr><td><code>g</code></td><td>odstęp między kolumnami w <code>row</code></td></tr>
+              <tr><td><code>auto</code></td><td><code>ms-auto</code> wypycha na prawą stronę</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <table class="table table-sm bg-white mb-0">
+            <thead><tr><th>Poziom</th><th>Wielkość</th></tr></thead>
+            <tbody>
+              <tr><td><code>0</code></td><td>0</td></tr>
+              <tr><td><code>1</code></td><td>0.25rem</td></tr>
+              <tr><td><code>2</code></td><td>0.5rem</td></tr>
+              <tr><td><code>3</code></td><td>1rem</td></tr>
+              <tr><td><code>4</code></td><td>1.5rem</td></tr>
+              <tr><td><code>5</code></td><td>3rem</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="mb-2"><code>border</code> rysuje ramkę. <code>rounded</code> zaokrągla rogi bez podania liczby.</p>
+      <div class="d-flex flex-wrap gap-3 align-items-center">
+        <div class="border p-3">border</div>
+        <div class="border rounded p-3">rounded</div>
+        <div class="border rounded-pill px-4 py-2">rounded-pill</div>
+      </div>
+    </section>
+
+    <section id="kolory" class="mt-5">
+      <h2 class="h4 border-bottom pb-2">Kolory i tekst</h2>
+      <p>Do <code>bg-</code>, <code>text-</code> i <code>btn-</code> dopisujesz: <code>primary</code>, <code>secondary</code>, <code>success</code>, <code>danger</code>, <code>warning</code>, <code>info</code>, <code>light</code>, <code>dark</code>.</p>
+      <div class="row g-2 mb-3">
+        <div class="col"><div class="bg-primary text-white p-2 text-center">primary</div></div>
+        <div class="col"><div class="bg-secondary text-white p-2 text-center">secondary</div></div>
+        <div class="col"><div class="bg-success text-white p-2 text-center">success</div></div>
+        <div class="col"><div class="bg-danger text-white p-2 text-center">danger</div></div>
+        <div class="col"><div class="bg-warning p-2 text-center">warning</div></div>
+        <div class="col"><div class="bg-info p-2 text-center">info</div></div>
+        <div class="col"><div class="bg-light border p-2 text-center">light</div></div>
+        <div class="col"><div class="bg-dark text-white p-2 text-center">dark</div></div>
+      </div>
+      <p class="mb-2">Jasne tło: <code>bg-danger-subtle</code>. Ciemniejszy tekst na nim: <code>text-danger-emphasis</code>. Na <code>bg-dark</code>: <code>text-white</code>, przygaszony <code>text-white-50</code>.</p>
+      <div class="mx-n3 mx-lg-n4 mb-3">
+        <section class="bg-danger-subtle text-danger-emphasis py-4">
+          <div class="container">
+            <h3 class="display-5 fw-bold mb-2">display-5 fw-bold</h3>
+            <p class="lead mb-0">lead — wstęp pod tytułem. Tło jest na section, tekst siedzi w container.</p>
+          </div>
+        </section>
+      </div>
+      <p class="bg-dark text-white p-3 mb-1">text-white na bg-dark</p>
+      <p class="bg-dark text-white-50 p-3">text-white-50 na bg-dark</p>
+    </section>
+
+    <section id="przyciski" class="mt-5">
+      <h2 class="h4 border-bottom pb-2">Przyciski <span class="badge text-bg-danger">INF.04</span></h2>
+      <p>Na elemencie są dwie klasy: <code>btn</code> oraz kolor. Sam <code>btn-primary</code> bez <code>btn</code> nie wystarcza. Przycisk formularza ma <code>type="submit"</code>. Przycisk, który nic nie wysyła, ma <code>type="button"</code>.</p>
+      <div class="d-flex flex-wrap gap-2 mb-3">
+        <button type="button" class="btn btn-primary">btn-primary</button>
+        <button type="button" class="btn btn-secondary">btn-secondary</button>
+        <button type="button" class="btn btn-success">btn-success</button>
+        <button type="button" class="btn btn-danger">btn-danger</button>
+        <button type="button" class="btn btn-warning">btn-warning</button>
+        <button type="button" class="btn btn-info">btn-info</button>
+        <button type="button" class="btn btn-light">btn-light</button>
+        <button type="button" class="btn btn-dark">btn-dark</button>
+      </div>
+      <p class="mb-2">Obwódka <span class="badge text-bg-secondary">lekcja</span> — <code>btn-outline-danger</code>, zawsze razem z <code>btn</code>. Rozmiar: <code>btn-sm</code>, <code>btn-lg</code>.</p>
+      <div class="d-flex flex-wrap gap-2 align-items-center">
+        <button type="button" class="btn btn-outline-danger">btn-outline-danger</button>
+        <button type="button" class="btn btn-success btn-sm">btn-sm</button>
+        <button type="button" class="btn btn-success btn-lg">btn-lg</button>
+      </div>
+      <pre class="bg-dark text-white p-3 rounded small mt-3 mb-0"><code>&lt;button type="submit" class="btn btn-primary"&gt;Wyślij&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-danger"&gt;Rezygnuję&lt;/button&gt;</code></pre>
+    </section>
+
+    <section id="karta" class="mt-5">
+      <h2 class="h4 border-bottom pb-2">Karta <span class="badge text-bg-secondary">lekcja</span></h2>
+      <p><code>h-100</code> wyrównuje wysokość kart w jednym rzędzie. Zdjęcie na górze: <code>card-img-top</code> (nie <code>card-image-top</code>).</p>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="https://picsum.photos/400/200?random=21" alt="Poranny bieg">
+            <div class="card-body">
+              <h3 class="card-title h5">card-title</h3>
+              <p class="card-text">card-text. Krótki opis.</p>
+              <a class="btn btn-primary" href="#formularz">btn btn-primary</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="https://picsum.photos/400/200?random=22" alt="Dłuższa trasa">
+            <div class="card-body">
+              <h3 class="card-title h5">Druga karta, h-100</h3>
+              <p class="card-text">Dłuższy opis. Karta i tak sięga dołu rzędu, bo obie mają h-100.</p>
+              <a class="btn btn-success" href="#formularz">btn btn-success</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <pre class="bg-dark text-white p-3 rounded small mt-3 mb-0"><code>&lt;div class="card h-100"&gt;
+  &lt;img class="card-img-top" src="https://picsum.photos/400/200" alt="Opis"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Tytuł&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Opis.&lt;/p&gt;
+    &lt;a class="btn btn-primary" href="#kontakt"&gt;Więcej&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+    <section id="navbar" class="mt-5">
+      <h2 class="h4 border-bottom pb-2">Navbar <span class="badge text-bg-secondary">lekcja</span></h2>
+      <p>Od <code>lg</code> (992px) linki stoją w rzędzie, <code>ms-auto</code> wypycha je w prawo. <code>sticky-top</code> zostawia pasek przy przewijaniu. Hamburger potrzebuje pliku <code>bootstrap.bundle.min.js</code>.</p>
+      <nav class="navbar navbar-expand navbar-dark bg-dark mb-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#siatka">navbar-brand</a>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#siatka">nav-link</a></li>
+            <li class="nav-item"><a class="nav-link" href="#karta">Oferta</a></li>
+            <li class="nav-item"><a class="nav-link" href="#formularz">Kontakt</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p class="mb-2">Tak wygląda pasek węziej niż 992px. <code>data-bs-target="#mainNav"</code> i <code>id="mainNav"</code> to ten sam napis. Kliknij hamburger.</p>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark demo-mobile">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#siatka">Nazwa</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#siatka">Start</a></li>
+              <li class="nav-item"><a class="nav-link" href="#karta">Oferta</a></li>
+              <li class="nav-item"><a class="nav-link" href="#formularz">Kontakt</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <pre class="bg-dark text-white p-3 rounded small mt-3 mb-0"><code>&lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"&gt;
+  &lt;div class="container"&gt;
+    &lt;a class="navbar-brand" href="#start"&gt;Nazwa&lt;/a&gt;
+    &lt;button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#mainNav"&gt;
+      &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="collapse navbar-collapse" id="mainNav"&gt;
+      &lt;ul class="navbar-nav ms-auto"&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#start"&gt;Start&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+    </section>
+
+    <section id="formularz" class="mt-5">
+      <h2 class="h4 border-bottom pb-2">Formularz <span class="badge text-bg-danger">INF.04</span> <span class="badge text-bg-secondary">walidacja: lekcja</span></h2>
+      <p><code>for</code> etykiety ma ten sam napis co <code>id</code> pola. Lista dostaje <code>form-select</code>, pole i textarea <code>form-control</code>. Imię i e-mail od <code>md</code> stoją obok siebie: <code>row g-3</code> i <code>col-12 col-md-6</code>.</p>
+      <p><code>novalidate</code> gasi dymki przeglądarki. Skrypt po submit dopisuje <code>was-validated</code> — dopiero wtedy widać <code>invalid-feedback</code>. Poniższy formularz ma tę klasę już dopisaną, żeby było widać błąd.</p>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <form class="needs-validation was-validated" novalidate>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="imie">form-label</label>
+                <input class="form-control" type="text" id="imie" required>
+                <div class="invalid-feedback">Podaj imię</div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="email">E-mail</label>
+                <input class="form-control" type="email" id="email" value="bez-malpy" required>
+                <div class="invalid-feedback">Podaj e-mail</div>
+              </div>
+            </div>
+            <div class="mb-3 mt-3">
+              <label class="form-label" for="trasa">Trasa</label>
+              <select class="form-select" id="trasa" required>
+                <option value="" selected disabled>Wybierz</option>
+                <option value="park">Park</option>
+              </select>
+              <div class="invalid-feedback">Wybierz trasę</div>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="zgoda" required>
+              <label class="form-check-label" for="zgoda">form-check, klik w napis zaznacza</label>
+              <div class="invalid-feedback">Zaznacz zgodę</div>
+            </div>
+            <button class="btn btn-primary" type="submit">type="submit"</button>
+          </form>
+        </div>
+        <div class="col-lg-6">
+          <p class="mb-2">Radio używa tych samych klas co checkbox. Wspólny <code>name</code> sprawia, że włączona jest jedna opcja.</p>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="odbior" id="wynos" checked>
+            <label class="form-check-label" for="wynos">Na wynos</label>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" name="odbior" id="lokal">
+            <label class="form-check-label" for="lokal">Na miejscu</label>
+          </div>
+          <pre class="bg-dark text-white p-3 rounded small mb-0"><code>&lt;form class="needs-validation" novalidate&gt;
+  &lt;label class="form-label" for="email"&gt;E-mail&lt;/label&gt;
+  &lt;input class="form-control" type="email" id="email" required&gt;
+  &lt;div class="invalid-feedback"&gt;Podaj e-mail&lt;/div&gt;
+  &lt;button class="btn btn-primary" type="submit"&gt;Wyślij&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="switch" class="mt-5">
+      <h2 class="h4 border-bottom pb-2">Switch <span class="badge text-bg-danger">INF.04</span></h2>
+      <p>To nadal checkbox. <code>form-switch</code> zmienia wygląd na przełącznik. <code>checked</code> włącza go od razu. <code>form-check-inline</code> stawia kolejny w tym samym rzędzie. <code>for</code> i <code>id</code> są takie same — klik w napis przełącza.</p>
+      <div class="mb-3">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="jeden">
+          <label class="form-check-label" for="jeden">jeden switch, bez checked</label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="wlaczony" checked>
+          <label class="form-check-label" for="wlaczony">checked — włączony na starcie</label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="wylaczony" disabled>
+          <label class="form-check-label" for="wylaczony">disabled — nie da się kliknąć</label>
+        </div>
+      </div>
+      <p class="mb-2">Trzy w jednym rzędzie, każdy włączony:</p>
+      <div class="mb-3">
+        <div class="form-check form-switch form-check-inline">
+          <input class="form-check-input" type="checkbox" id="d5" checked>
+          <label class="form-check-label" for="d5">5 km</label>
+        </div>
+        <div class="form-check form-switch form-check-inline">
+          <input class="form-check-input" type="checkbox" id="d10" checked>
+          <label class="form-check-label" for="d10">10 km</label>
+        </div>
+        <div class="form-check form-switch form-check-inline">
+          <input class="form-check-input" type="checkbox" id="polmaraton" checked>
+          <label class="form-check-label" for="polmaraton">Półmaraton</label>
+        </div>
+      </div>
+      <pre class="bg-dark text-white p-3 rounded small mb-0"><code>&lt;div class="form-check form-switch form-check-inline"&gt;
+  &lt;input class="form-check-input" type="checkbox" id="d5" checked&gt;
+  &lt;label class="form-check-label" for="d5"&gt;5 km&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+    <section id="inf04" class="mt-5 mb-5">
+      <h2 class="h4 border-bottom pb-2">Podłączenie i zwykły CSS <span class="badge text-bg-danger">INF.04</span></h2>
+      <p>Na lekcji styl idzie z CDN w pliku HTML. Na egzaminie linijkę bierze się z tabeli 1. Uczeń ma ją rozpoznać, nie pisać aplikacji w Reactcie.</p>
+      <div class="row g-3 mb-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h6">React — góra komponentu albo index.js</h3>
+              <pre class="bg-dark text-white p-3 rounded small mb-0"><code>import 'bootstrap/dist/css/bootstrap.css';</code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h6">Angular — raz, w src/styles.css</h3>
+              <pre class="bg-dark text-white p-3 rounded small mb-0"><code>@import "~bootstrap/dist/css/bootstrap.css";</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>W Reactcie atrybuty z tabeli zapisuje się jako <code>className</code> i <code>htmlFor</code>. W Angularze zostają <code>class</code> i <code>for</code>.</p>
+      <p class="mb-2">Liczba w poleceniu to zwykły CSS, nie klasa. Margines 5 px to <code>margin</code>, zaokrąglenie 8 px to <code>border-radius</code>. <code>m-1</code> to 0.25rem, <code>rounded</code> nie przyjmuje liczby z polecenia.</p>
+      <div class="border p-3 bg-white" style="margin-bottom: 5px; border-radius: 8px;">
+        style="margin-bottom: 5px; border-radius: 8px;"
+      </div>
+      <p class="mt-4 mb-1">Poza sprawdzianem i poza typowym arkuszem: modal, accordion, carousel, ikony, własny theme, floating labels, input group, pisanie skryptu walidacji od zera.</p>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+          crossorigin="anonymous"></script>
+  <script>
+    (() => {
+      document.querySelectorAll(".needs-validation").forEach((form) => {
+        form.addEventListener("submit", (event) => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add("was-validated");
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
