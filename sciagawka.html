@@ -32,6 +32,7 @@
           <li class="nav-item"><a class="nav-link" href="#siatka">Siatka</a></li>
           <li class="nav-item"><a class="nav-link" href="#odstepy">Odstępy</a></li>
           <li class="nav-item"><a class="nav-link" href="#kolory">Kolory</a></li>
+          <li class="nav-item"><a class="nav-link" href="#czcionki">Czcionki</a></li>
           <li class="nav-item"><a class="nav-link" href="#przyciski">Przyciski</a></li>
           <li class="nav-item"><a class="nav-link" href="#karta">Karta</a></li>
           <li class="nav-item"><a class="nav-link" href="#navbar">Navbar</a></li>
@@ -63,14 +64,11 @@
         </tbody>
       </table>
 
-      <p class="mb-2"><code>container</code> zostawia puste boki. <code>container-fluid</code> idzie od krawędzi do krawędzi.</p>
-      <div class="mx-n3 mx-lg-n4 mb-4">
-        <div class="bg-primary text-white py-2">
-          <div class="container">container — węższy środek</div>
-        </div>
-        <div class="bg-dark text-white py-2">
-          <div class="container-fluid">container-fluid — cała szerokość</div>
-        </div>
+      <p class="mb-2"><code>container</code> ma limit szerokości i zostawia puste boki. <code>container-fluid</code> dochodzi do krawędzi okna. Kolor dawaj na tej klasie. Gdy tło jest na rodzicu, oba paski są tej samej szerokości.</p>
+      <div class="border border-dark border-2 mx-n3 mx-lg-n4 mb-4 py-3 bg-secondary-subtle">
+        <p class="small text-center mb-2">ramka = szerokość okna</p>
+        <div class="container bg-primary text-white text-center py-2 mb-2">container</div>
+        <div class="container-fluid bg-dark text-white text-center py-2">container-fluid</div>
       </div>
 
       <p class="mb-2">Dwanaście razy <code>col-1</code>. Tyle kolumn ma jeden <code>row</code>.</p>
@@ -144,6 +142,79 @@
           </table>
         </div>
       </div>
+      <h3 class="h6 mt-4">Margin — odstęp na zewnątrz</h3>
+      <div class="row g-3 mb-3">
+        <div class="col-6 col-lg-3">
+          <div class="border bg-white"><div class="bg-primary text-white mt-3 px-2">blok</div></div>
+          <p class="small mb-0"><code>mt-3</code> góra</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="border bg-white"><div class="bg-primary text-white mb-3 px-2">blok</div></div>
+          <p class="small mb-0"><code>mb-3</code> dół</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="border bg-white"><div class="bg-primary text-white ms-3 px-2">blok</div></div>
+          <p class="small mb-0"><code>ms-3</code> lewo (start)</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="border bg-white"><div class="bg-primary text-white me-3 px-2">blok</div></div>
+          <p class="small mb-0"><code>me-3</code> prawo (end)</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="border bg-white"><div class="bg-primary text-white mx-3 px-2">blok</div></div>
+          <p class="small mb-0"><code>mx-3</code> lewo i prawo</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="border bg-white"><div class="bg-primary text-white my-3 px-2">blok</div></div>
+          <p class="small mb-0"><code>my-3</code> góra i dół</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="border bg-white"><div class="bg-primary text-white m-3 px-2">blok</div></div>
+          <p class="small mb-0"><code>m-3</code> wszystkie strony</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="border bg-white"><div class="bg-primary text-white w-50 ms-auto px-2">blok</div></div>
+          <p class="small mb-0"><code>ms-auto</code> wypycha w prawo</p>
+        </div>
+      </div>
+
+      <h3 class="h6">Padding — odstęp w środku ramki</h3>
+      <p class="small">Kolor wypełnia treść do końca. Pusty pasek przy czerwonej ramce to padding.</p>
+      <div class="row g-3 mb-3">
+        <div class="col-6 col-lg-3">
+          <div class="border border-danger pt-3"><div class="bg-danger-subtle">tekst</div></div>
+          <p class="small mb-0"><code>pt-3</code> góra</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="border border-danger pb-3"><div class="bg-danger-subtle">tekst</div></div>
+          <p class="small mb-0"><code>pb-3</code> dół</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="border border-danger ps-3"><div class="bg-danger-subtle">tekst</div></div>
+          <p class="small mb-0"><code>ps-3</code> lewo</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="border border-danger pe-3"><div class="bg-danger-subtle">tekst</div></div>
+          <p class="small mb-0"><code>pe-3</code> prawo</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="border border-danger px-3"><div class="bg-danger-subtle">tekst</div></div>
+          <p class="small mb-0"><code>px-3</code> lewo i prawo</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="border border-danger py-3"><div class="bg-danger-subtle">tekst</div></div>
+          <p class="small mb-0"><code>py-3</code> góra i dół</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="border border-danger p-3"><div class="bg-danger-subtle">tekst</div></div>
+          <p class="small mb-0"><code>p-3</code> wszystkie strony</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="border border-danger px-4 py-2"><div class="bg-danger-subtle">tekst</div></div>
+          <p class="small mb-0"><code>px-4 py-2</code> szerzej w bok, niżej w pionie</p>
+        </div>
+      </div>
+
       <p class="mb-2"><code>border</code> rysuje ramkę. <code>rounded</code> zaokrągla rogi bez podania liczby.</p>
       <div class="d-flex flex-wrap gap-3 align-items-center">
         <div class="border p-3">border</div>
@@ -154,18 +225,96 @@
 
     <section id="kolory" class="mt-5">
       <h2 class="h4 border-bottom pb-2">Kolory i tekst</h2>
-      <p>Do <code>bg-</code>, <code>text-</code> i <code>btn-</code> dopisujesz: <code>primary</code>, <code>secondary</code>, <code>success</code>, <code>danger</code>, <code>warning</code>, <code>info</code>, <code>light</code>, <code>dark</code>.</p>
-      <div class="row g-2 mb-3">
-        <div class="col"><div class="bg-primary text-white p-2 text-center">primary</div></div>
-        <div class="col"><div class="bg-secondary text-white p-2 text-center">secondary</div></div>
-        <div class="col"><div class="bg-success text-white p-2 text-center">success</div></div>
-        <div class="col"><div class="bg-danger text-white p-2 text-center">danger</div></div>
-        <div class="col"><div class="bg-warning p-2 text-center">warning</div></div>
-        <div class="col"><div class="bg-info p-2 text-center">info</div></div>
-        <div class="col"><div class="bg-light border p-2 text-center">light</div></div>
-        <div class="col"><div class="bg-dark text-white p-2 text-center">dark</div></div>
+      <p>Do <code>bg-</code>, <code>text-</code> i <code>btn-</code> dopisujesz nazwę koloru. Odcień doklejasz po nazwie: <code>-subtle</code> to jasne tło, <code>-emphasis</code> to ciemniejszy tekst na tym tle. <code>text-muted</code> jest jeden, szary — nie ma <code>bg-primary-muted</code>.</p>
+      <div class="table-responsive mb-3">
+        <table class="table table-bordered align-middle text-center small mb-0 bg-white">
+          <thead>
+            <tr>
+              <th>nazwa</th>
+              <th><code>bg-</code></th>
+              <th><code>bg-…-subtle</code></th>
+              <th><code>text-</code></th>
+              <th><code>text-…-emphasis</code></th>
+              <th>przygaszony</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>primary</th>
+              <td class="bg-primary text-white">bg-primary</td>
+              <td class="bg-primary-subtle text-primary-emphasis">bg-primary-subtle</td>
+              <td class="text-primary">text-primary</td>
+              <td class="bg-primary-subtle text-primary-emphasis">text-primary-emphasis</td>
+              <td class="text-primary text-opacity-50">text-primary text-opacity-50</td>
+            </tr>
+            <tr>
+              <th>secondary</th>
+              <td class="bg-secondary text-white">bg-secondary</td>
+              <td class="bg-secondary-subtle text-secondary-emphasis">bg-secondary-subtle</td>
+              <td class="text-secondary">text-secondary</td>
+              <td class="bg-secondary-subtle text-secondary-emphasis">text-secondary-emphasis</td>
+              <td class="text-secondary text-opacity-50">text-secondary text-opacity-50</td>
+            </tr>
+            <tr>
+              <th>success</th>
+              <td class="bg-success text-white">bg-success</td>
+              <td class="bg-success-subtle text-success-emphasis">bg-success-subtle</td>
+              <td class="text-success">text-success</td>
+              <td class="bg-success-subtle text-success-emphasis">text-success-emphasis</td>
+              <td class="text-success text-opacity-50">text-success text-opacity-50</td>
+            </tr>
+            <tr>
+              <th>danger</th>
+              <td class="bg-danger text-white">bg-danger</td>
+              <td class="bg-danger-subtle text-danger-emphasis">bg-danger-subtle</td>
+              <td class="text-danger">text-danger</td>
+              <td class="bg-danger-subtle text-danger-emphasis">text-danger-emphasis</td>
+              <td class="text-danger text-opacity-50">text-danger text-opacity-50</td>
+            </tr>
+            <tr>
+              <th>warning</th>
+              <td class="bg-warning">bg-warning</td>
+              <td class="bg-warning-subtle text-warning-emphasis">bg-warning-subtle</td>
+              <td class="text-warning bg-dark">text-warning</td>
+              <td class="bg-warning-subtle text-warning-emphasis">text-warning-emphasis</td>
+              <td class="text-warning text-opacity-50 bg-dark">text-warning text-opacity-50</td>
+            </tr>
+            <tr>
+              <th>info</th>
+              <td class="bg-info">bg-info</td>
+              <td class="bg-info-subtle text-info-emphasis">bg-info-subtle</td>
+              <td class="text-info bg-dark">text-info</td>
+              <td class="bg-info-subtle text-info-emphasis">text-info-emphasis</td>
+              <td class="text-info text-opacity-50 bg-dark">text-info text-opacity-50</td>
+            </tr>
+            <tr>
+              <th>light</th>
+              <td class="bg-light border">bg-light</td>
+              <td class="bg-light-subtle border text-light-emphasis">bg-light-subtle</td>
+              <td class="text-light bg-dark">text-light</td>
+              <td class="bg-light-subtle text-light-emphasis">text-light-emphasis</td>
+              <td class="text-light text-opacity-50 bg-dark">text-light text-opacity-50</td>
+            </tr>
+            <tr>
+              <th>dark</th>
+              <td class="bg-dark text-white">bg-dark</td>
+              <td class="bg-dark-subtle text-dark-emphasis">bg-dark-subtle</td>
+              <td class="text-dark">text-dark</td>
+              <td class="bg-dark-subtle text-dark-emphasis">text-dark-emphasis</td>
+              <td class="text-dark text-opacity-50">text-dark text-opacity-50</td>
+            </tr>
+            <tr>
+              <th>muted</th>
+              <td class="text-secondary">—</td>
+              <td class="bg-body-secondary">bg-body-secondary</td>
+              <td class="text-muted">text-muted</td>
+              <td class="text-body-secondary">text-body-secondary</td>
+              <td class="text-body-tertiary">text-body-tertiary</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <p class="mb-2">Jasne tło: <code>bg-danger-subtle</code>. Ciemniejszy tekst na nim: <code>text-danger-emphasis</code>. Na <code>bg-dark</code>: <code>text-white</code>, przygaszony <code>text-white-50</code>.</p>
+      <p class="mb-2">Jasne tło sekcji: <code>bg-danger-subtle</code> i na nim <code>text-danger-emphasis</code>. Na <code>bg-dark</code>: <code>text-white</code>, przygaszony <code>text-white-50</code>. Szary tekst bez nazwy koloru: <code>text-muted</code>.</p>
       <div class="mx-n3 mx-lg-n4 mb-3">
         <section class="bg-danger-subtle text-danger-emphasis py-4">
           <div class="container">
@@ -176,6 +325,41 @@
       </div>
       <p class="bg-dark text-white p-3 mb-1">text-white na bg-dark</p>
       <p class="bg-dark text-white-50 p-3">text-white-50 na bg-dark</p>
+    </section>
+
+    <section id="czcionki" class="mt-5">
+      <h2 class="h4 border-bottom pb-2">Czcionki <span class="badge text-bg-secondary">lekcja</span></h2>
+      <p>Mniejszy numer to większa czcionka. <code>display</code> jest do wielkiego tytułu i jest cienkie, dopóki nie dopiszesz <code>fw-bold</code>. <code>fs</code> zmienia tylko rozmiar. Od 1200 px rozmiary stoją w tabeli. Wężej <code>display</code> oraz <code>fs-1</code>…<code>fs-4</code> maleją razem z oknem. <code>fs-5</code> i <code>fs-6</code> są stałe.</p>
+      <p>Na sprawdzianie „największa czcionka predefiniowana” to <code>fs-1</code>. <code>display-1</code> jest większe, ale to osobna skala.</p>
+      <div class="row g-3">
+        <div class="col-lg-6">
+          <table class="table table-sm bg-white align-middle mb-0">
+            <thead><tr><th>display</th><th>od 1200 px</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><code>display-1</code></td><td>5rem</td><td class="display-1">Aa</td></tr>
+              <tr><td><code>display-2</code></td><td>4.5rem</td><td class="display-2">Aa</td></tr>
+              <tr><td><code>display-3</code></td><td>4rem</td><td class="display-3">Aa</td></tr>
+              <tr><td><code>display-4</code></td><td>3.5rem</td><td class="display-4">Aa</td></tr>
+              <tr><td><code>display-5</code></td><td>3rem</td><td class="display-5">Aa</td></tr>
+              <tr><td><code>display-6</code></td><td>2.5rem</td><td class="display-6">Aa</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-lg-6">
+          <table class="table table-sm bg-white align-middle mb-0">
+            <thead><tr><th>fs</th><th>od 1200 px</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><code>fs-1</code></td><td>2.5rem</td><td class="fs-1">Aa</td></tr>
+              <tr><td><code>fs-2</code></td><td>2rem</td><td class="fs-2">Aa</td></tr>
+              <tr><td><code>fs-3</code></td><td>1.75rem</td><td class="fs-3">Aa</td></tr>
+              <tr><td><code>fs-4</code></td><td>1.5rem</td><td class="fs-4">Aa</td></tr>
+              <tr><td><code>fs-5</code></td><td>1.25rem</td><td class="fs-5">Aa</td></tr>
+              <tr><td><code>fs-6</code></td><td>1rem</td><td class="fs-6">Aa</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="mt-3 mb-0"><code>display-6</code> i <code>fs-1</code> mają od 1200 px ten sam rozmiar, 2.5rem. <code>lead</code> to większy akapit pod tytułem, nie numer ze skali.</p>
     </section>
 
     <section id="przyciski" class="mt-5">
